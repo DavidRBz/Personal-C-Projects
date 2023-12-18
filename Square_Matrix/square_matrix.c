@@ -18,9 +18,9 @@ int main(){
     int matrix[matSize][matSize];
 
     //Fills the matrix
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < matSize; i++)
     {
-        for (int j = 0; j < 3; j++)
+        for (int j = 0; j < matSize; j++)
         {
             printf("Enter an integer for row %d and column %d: \n", i, j);          
             scanf("%d", &matrix[i][j]);
@@ -28,21 +28,21 @@ int main(){
     }
 
     //Prints the matrix for easier visualization of the diagonal
-    for (int i = 0; i < 3; i++) 
+    for (int i = 0; i < matSize; i++) 
     {
         printf("[");
 
-        for (int j = 0; j < 3; j++)
+        for (int j = 0; j < matSize; j++)
         {          
             printf("%d", matrix[i][j]);
         }
-        
+
         printf("]");
         printf("\n");
     }  
 
     //Sums up the diagonal
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < matSize; i++)
     {
         sum += matrix[i][i];
     }
